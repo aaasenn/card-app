@@ -15,17 +15,18 @@ import { editBioProp } from "../../store/user/actions";
 import { selectUser } from "../../store/user/selectors";
 
 
-function valuetext(value: number) {
-  return `${value}`;
-}
-
-function valueLabelFormat(value: number) {
-  return marks.findIndex((mark: IMarks) => mark.value === value) + 1;
-}
 
 export const SwitchComponent = () => {
   const {englishLevel, isDynamicDifficulty} = useSelector(selectUser)
   const dispatch = useDispatch();
+  
+  function valuetext(value: number) {
+    return `${value}`;
+  }
+  
+  function valueLabelFormat(value: number) {
+    return marks.findIndex((mark: IMarks) => mark.value === value) + 1;
+  }
 
   function handleSwitchChange(e: React.BaseSyntheticEvent) {
     dispatch(editBioProp({
@@ -48,7 +49,7 @@ export const SwitchComponent = () => {
       <FormGroup>
         <FormControlLabel
           onChange={handleSwitchChange}
-          control={<Switch defaultChecked name="tumbler" />}
+          control={<Switch defaultChecked={isDynamicDifficulty} name="tumbler" />}
           label="Включить"
           sx={{ alignSelf: "center" }}
         />

@@ -36,7 +36,7 @@ const LoginPage = () => {
 
   React.useEffect(() => {
     if (localStorage.getItem("authToken")) {
-      navigate("/");
+      navigate("/card-app");
     }
   }, []);
 

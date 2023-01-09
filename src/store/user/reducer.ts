@@ -9,7 +9,7 @@ const initialState: IUser = {
   dateOfBirth: "",
   prefferebleEnglish: "AU",
   sex: "m",
-  isDynamicDifficulty: false,
+  isDynamicDifficulty: true,
   englishLevel: 0,
 };
 
