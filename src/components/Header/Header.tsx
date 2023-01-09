@@ -33,7 +33,7 @@ const Header = () => {
           <StyledLink to={"profile"}>A</StyledLink>
         </Avatar>
         <div className="header_profile-name">
-          <StyledLink to={"profile"}>Arsen</StyledLink>
+          <StyledLink to={"profile"}>Admin</StyledLink>
           <StyledLink to={"/login"} onClick={handleLogOutClick}>
             <LogoutIcon />
           </StyledLink>
