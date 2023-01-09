@@ -13,20 +13,20 @@ function App() {
 
   React.useEffect(() => {
     if (!authToken) {
-      navigate('/login')
+      navigate('/card-app/login')
     }
   }, [authToken])
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Page />}>
+        <Route path="/card-app" element={<Page />}>
           <Route path="" element={<MainContent />} />
           <Route path="cards" element={<Content />} />
           <Route path="favourites" element={<Content />} />
           <Route path="profile" element={<Profile />} />
         </Route>
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/card-app/login' element={<LoginPage />} />
       </Routes>
     </div>
   );
