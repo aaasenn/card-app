@@ -25,7 +25,7 @@ const LoginPage = () => {
   const onSubmit = (values: LoginValues) => {
     if (values.username === "admin" && values.password === "admin") {
       localStorage.setItem("authToken", "1111");
-      navigate("/");
+      navigate("/card-app");
     } else {
       setError("username", {
         type: "custom",
